@@ -1,0 +1,138 @@
+body {
+
+    height: 100%;
+
+    font-family: 'PT Sans';
+
+}
+
+
+
+p {
+
+
+
+    font-weight: 400;
+
+    margin-left: 32px;
+
+    margin-right: 39px;
+
+    font-size: 12px;
+
+}
+
+
+
+.conteiner {
+
+    width: 95%;
+
+    margin: 10% auto;
+
+    position: relative;
+
+}
+
+
+
+
+
+h1 {
+
+    margin-left: 41px;
+
+    font-size: 24px;
+
+    color: #333333;
+
+    font-size: 24px;
+
+    text-align: left;
+
+    font-weight: 400;
+
+}
+
+
+
+
+
+
+
+article:after {
+
+    content: "";
+
+    display: block;
+
+    height: 0;
+
+    clear: both;
+
+    visibility: hidden;
+
+}
+
+
+
+h2{
+
+  margin-left: 41px;
+
+  color: #333333;
+
+font-size: 18px;
+
+font-weight: 400;
+
+text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+background-color: green;
+  margin-top: 28px;
+
+  margin-left: 10%;
+
+    position: relative;
+
+    bottom: 15px;
+
+    margin-right: 10%;
+
+    font-size: 9px;
+
+    text-align: center;
+
+    font-weight: 400;
+
+}
+
+@media screen and (max-width:7in){
+  footer{
+    background-color: red;
+  }
+}
+@media screen and (max-width:3.5in){
+  footer{
+    background-color: white;
+  }
+}
