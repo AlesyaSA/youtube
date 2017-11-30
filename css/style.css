@@ -2,8 +2,9 @@ body{
   background-color: silver;
   margin: auto;
 }
-
-
+h3{margin:0; }
+p{margin:0;}
+h6{margin:0; }
 #youtube{
   background-color: red;
   width:30px;
