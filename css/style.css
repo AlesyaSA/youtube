@@ -124,18 +124,18 @@ input{
                     background-color: #484848;
                     color: #FFFFFF;
                 }
-  @media (max-width:950px){
+  @media (max-width:10in){
       #contentContainer {
           width: 700px;
       }
   }
 
-  @media (max-width:700px){
+  @media (max-width:8in){
       #contentContainer {
           width: 450px;
       }
   }
-@media (max-width:450px){
+@media (max-width:5in){
       #contentContainer {
           width: 200px;
       }
