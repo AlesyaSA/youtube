@@ -1,92 +1,85 @@
 <!DOCTYPE html>
-
 <html>
 
-
-
 <head>
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="youtube.js" ></script>
+<title>Youtube</title>
 
-    <link href="css/style.css" rel="stylesheet">
+<style>
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
+</style>
 </head>
 
-
-
 <body>
+  <div id="contentContainer">
+      <div id="wrapper">
+          <div id="itemOne" class="content">
+
+          </div>
+          <div id="itemTwo" class="content">
+
+          </div>
+          <div id="itemThree" class="content">
+
+          </div>
+          <div id="itemFour" class="content">
+
+          </div>
+      </div>
+  </div>
+  <div id="navLinks">
+    <ul>
+        <li class="itemLinks" data-pos="0px">1</li>
+        <li class="itemLinks" data-pos="-550px">2</li>
+        <li class="itemLinks" data-pos="-1100px">3</li>
+        <li class="itemLinks" data-pos="-1650px">4</li>
+    </ul>
+</div>
+<script>
+
+var links = document.querySelectorAll(".itemLinks");
+var wrapper = document.querySelector("#wrapper");
 
 
-
-    <div class="conteiner">
-
+var activeLink = 0;
 
 
+for (var i = 0; i < links.length; i++) {
+var link = links[i];
+link.addEventListener('click', setClickedItem, false);
 
 
-  
-
-            <h1> Lorem ipsum dolor sit amet </h1>
-
+link.itemID = i;
+}
 
 
-            <article class="article1">
+links[activeLink].classList.add("active");
+
+function setClickedItem(e) {
+removeActiveLinks();
+
+var clickedLink = e.target;
+activeLink = clickedLink.itemID;
+
+changePosition(clickedLink);
+}
+
+function removeActiveLinks() {
+for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+}
+}
 
 
-               <p>
+function changePosition(link) {
+  var position = link.getAttribute("data-pos");
+    wrapper.style.left = position;
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit in nisl accumsan blandit. Mauris sed consequat tortor. Etiam enim odio, elementum sed risus id, faucibus lobortis felis. Donec maximus dolor in egestas fringilla. Pellentesque a neque
+    link.classList.add("active");
 
-                    quis eros lobortis mollis sit amet ut dolor. Aenean nec quam dictum, pharetra nulla et, ornare eros.
+}
 
-                </p>
-
-                <p>
-
-                    Quisque accumsan felis vel dolor placerat, sed imperdiet dolor tempor. Morbi et molestie dolor, ac consectetur ipsum. Nullam varius risus in purus bibendum, in auctor odio eleifend. Proin cursus leo quis ex commodo, non placerat diam finibus.
-
-                </p>
-
-            </article>
-
-            <article class="article2">
-
-
-                <p>
-
-                    Aliquam tempus gravida fermentum. Quisque vel sodales risus. Sed ultricies justo sem, in rutrum neque interdum eget. Donec nec metus nunc. Nullam tempus convallis porttitor. Aliquam tempus gravida fermentum. Quisque vel sodales risus. Sed ultricies justo
-
-                    sem, in rutrum neque interdum eget. Donec nec metus nunc. Nullam tempus convallis porttitor. Sed ultricies justo sem, in rutrum neque interdum eget. Donec nec metus nunc. Nullam tempus convallis porttitor.
-
-                </p>
-
-            </article>
-
-
-
-<h2>Nulla viverra tortor efficitur vestibulum tristique.</h2>
-
-
-
-
-
-<footer>
-
-  Suspendisse bibendum porttitor purus quis vestibulum. Etiam pellentesque justo ac dui cursus tincidunt. Etiam iaculis semper metus vel facilisis. Etiam ut mi nec libero ullamcorper feugiat a eu augue.
-
-</footer>
-
-        </div>
-
-
-
-
-
-
-
-
+</script>
 </body>
-
-
-
 </html>
